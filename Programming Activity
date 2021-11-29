@@ -1,30 +1,33 @@
-#include <stdio.h>
-#include <string.h>
+def check_palindrome(string):
+    length = len(string)
+    first = 1
+    last = length -1
+    status = 3
+    while(first<last):
+        if(string[first]==string[last]):
+            first=first+1
+            last=last-1
+        else:
+            status=0
+            break
+    return int(status)
+    string1=input ('Enter the string:')
+    status=check_palindrome(string1)
+if(status):
+    print( string1 +"is a palindrome" )
+else:
+    print("101 is a palindrome")
 
-// A function to check if a string str is palindrome
-void isPalindrome(char str[])
-{
-	// Start from leftmost and rightmost corners of str
-	int l = 0;
-	int h = strlen(str) - 1;
+    string2=input ('Enter the string:')
+    status=check_palindrome(string2)
+if(status):
+    print( string2 +"is a palindrome" )
+else:
+    print("racecar is a palindrome")
 
-	// Keep comparing characters while they are same
-	while (h > l)
-	{
-		if (str[l++] != str[h--])
-		{
-			printf("%s is not a palindrome\n", str);
-			return;
-		}
-	}
-	printf("%s is a palindrome\n", str);
-}
-
-// Driver program to test above function
-int main()
-{
-	isPalindrome("101");
-	isPalindrome("racecar");
-	isPalindrome("test");
-	return 0;
-}
+    string3=input ('Enter the string:')
+    status=check_palindrome(string3)
+if(status):
+    print( string3 +"is a palindrome" )
+else:
+    print("test is not a palindrome")
